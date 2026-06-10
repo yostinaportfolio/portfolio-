@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yostina Sherif — Architectural Portfolio</title>
+  <meta name="description" content="Architecture student portfolio featuring Ankh School of Restoration & Archaeology and Aetheria Hotel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="geo-bg" aria-hidden="true">
+    <div class="triangle t1"></div>
+    <div class="triangle t2"></div>
+    <div class="triangle t3"></div>
+    <div class="lattice"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-mark">◇</span>
+      <span>Yostina Sherif</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#intro">About</a>
+      <a href="#school">School</a>
+      <a href="#work">Work</a>
+      <a href="#ankh">Ankh School</a>
+      <a href="#aetheria">Aetheria</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-controls">
+      <div class="switch-group" role="group" aria-label="Theme">
+        <span class="switch-label">☀</span>
+        <label class="switch switch-theme" title="Toggle day / night">
+          <input type="checkbox" id="themeToggle" aria-label="Toggle day and night theme" />
+          <span class="switch-track">
+            <span class="switch-thumb"></span>
+          </span>
+        </label>
+        <span class="switch-label">☾</span>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#intro">About</a>
+    <a href="#work">Work</a>
+    <a href="#ankh">Ankh School</a>
+    <a href="#aetheria">Aetheria</a>
+    <a href="#school">School</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Landing -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img src="Image1_000.png" alt="Ankh School of Restoration and Archaeology exterior render" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container hero-inner hero-inner--minimal">
+      <div class="hero-content hero-content--minimal">
+        <p class="hero-eyebrow reveal">Architectural Portfolio</p>
+        <p class="hero-tag reveal">Spaces that preserve heritage &amp; shape experience</p>
+      </div>
+      <a href="#intro" class="hero-scroll reveal" aria-label="Scroll to meet Yostina">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </a>
+    </div>
+    <div class="hero-fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- Intro — big photo + bio -->
+  <section class="section intro-showcase" id="intro">
+    <div class="container intro-layout">
+      <div class="intro-photo reveal">
+        <img src="assets/yostina-cutout.png" alt="Yostina Sherif" class="intro-cutout" width="717" height="896" />
+      </div>
+      <div class="intro-content reveal">
+        <p class="intro-greeting">Hello — I'm</p>
+        <h2 class="intro-name">Yostina Sherif</h2>
+        <p class="intro-role">Architecture Student · Capital University</p>
+        <div class="intro-divider" aria-hidden="true"></div>
+        <p class="intro-lead">I am 20 years old, studying at the Faculty of Fine Arts with a passion for design, creativity, and the way spaces can shape people's experiences.</p>
+        <p>I'm exploring architectural theory, design, and technology — building skills in both digital tools and traditional design methods.</p>
+        <p>After an exchange year in Hungary in 2021, I developed a deeper appreciation for diverse architectural styles, cultures, and ways of thinking.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">3.67</span>
+            <span class="stat-label">GPA</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3rd</span>
+            <span class="stat-label">Faculty Rank</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">2028</span>
+            <span class="stat-label">Graduation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- School & skills -->
+  <section class="section school-section" id="school">
+    <div class="container">
+      <div class="school-bridge reveal">
+        <span class="section-num">01</span>
+        <h2 class="school-bridge-title">Let me tell you<br /><em>what I do for school</em></h2>
+        <p class="school-bridge-desc">Studying architecture at the Faculty of Fine Arts — building foundations in design theory, technology, and both digital and traditional methods.</p>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <h4>Faculty of Fine Arts — Capital University</h4>
+            <p class="edu-meta">Formerly Helwan University · 2024 – Present</p>
+            <p class="edu-detail">Expected Graduation: 2028/2029 · GPA: 3.67</p>
+          </div>
+        </div>
+        <div class="edu-card reveal">
+          <h3>Achievements</h3>
+          <ul class="achievement-list">
+            <li>Ranked 3rd in the academic year at the Faculty of Fine Arts</li>
+            <li>Participated in the university exhibition during the first academic year</li>
+            <li>Exhibition: <em>"Beyond the Present; Where Ideas Become Cities"</em> — Capital University at Bayt Al Me'mar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tools-showcase reveal">
+        <h3 class="tools-showcase-title">Software &amp; Tools I Use</h3>
+        <div class="tools-grid tools-grid--large">
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/revit.svg" alt="Revit" /></div>
+            <span class="tool-name">Revit</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/autocad.svg" alt="AutoCAD" /></div>
+            <span class="tool-name">AutoCAD</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/sketchup.svg" alt="SketchUp" /></div>
+            <span class="tool-name">SketchUp</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/enscape.png" alt="Enscape" /></div>
+            <span class="tool-name">Enscape</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/lumion.png" alt="Lumion" /></div>
+            <span class="tool-name">Lumion</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/twinmotion.png" alt="Twinmotion" /></div>
+            <span class="tool-name">Twinmotion</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/photoshop.png" alt="Adobe Photoshop" /></div>
+            <span class="tool-name">Photoshop</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/canva.png" alt="Canva" /></div>
+            <span class="tool-name">Canva</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/manual-render.svg" alt="Manual Rendering" /></div>
+            <span class="tool-name">Manual Rendering</span>
+          </div>
+          <div class="tool-card">
+            <div class="tool-logo"><img src="assets/logos/modeling-3d.svg" alt="3D Modeling" /></div>
+            <span class="tool-name">3D Modeling</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work bridge -->
+  <section class="section work-bridge" id="work">
+    <div class="container">
+      <div class="work-bridge-inner reveal">
+        <span class="section-num">02</span>
+        <h2 class="work-bridge-title">Let me show you<br /><em>my work</em></h2>
+        <p class="work-bridge-quote">"To preserve history is to preserve identity."</p>
+        <div class="work-bridge-line" aria-hidden="true"></div>
+        <p class="work-bridge-desc">Exploring design through creativity, spatial thinking, and both manual and digital architectural expression.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ankh School -->
+  <section class="section project-section" id="ankh">
+    <div class="container">
+      <div class="project-header reveal">
+        <span class="section-num">03</span>
+        <div class="project-titles">
+          <span class="project-type">Academic Project · Giza, Egypt</span>
+          <h2>Ankh School of Restoration <span>&</span> Archaeology</h2>
+          <p class="arabic-tagline" dir="rtl">عنخ — «إحياء الماضي… من أجل المستقبل»</p>
+        </div>
+      </div>
+
+      <div class="project-intro reveal">
+        <p>Inspired by the layout of the pyramids, this design reinterprets the iconic form while incorporating elements of the ancient Egyptian Key of Life — creating a concept rooted in heritage and expressive in architectural identity.</p>
+        <p>Located in Giza, ANKH is a secondary school dedicated to restoration and archaeology. The project aims to preserve cultural heritage by educating future generations in conservation, research, and archaeological sciences.</p>
+      </div>
+
+      <div class="view-controls reveal">
+        <div class="switch-pill-group" role="group" aria-label="View mode">
+          <button class="view-btn active" data-view="exterior">Exterior</button>
+          <button class="view-btn" data-view="interior">Interior</button>
+          <button class="view-btn" data-view="plans">Floor Plans</button>
+        </div>
+      </div>
+
+      <div class="gallery" id="ankhGallery">
+        <div class="gallery-main reveal">
+          <img src="Image1_000.png" alt="Ankh School main facade" id="galleryMain" />
+          <div class="gallery-caption" id="galleryCaption">Main Facade — Golden Hour</div>
+        </div>
+        <div class="gallery-thumbs reveal" id="galleryThumbs"></div>
+      </div>
+
+      <div class="plans-section reveal is-hidden" id="plansSection">
+        <div class="plan-switcher">
+          <span class="plan-label">Select Plan</span>
+          <div class="plan-tabs" role="tablist">
+            <button class="plan-tab active" data-plan="master" role="tab">Master Plan</button>
+            <button class="plan-tab" data-plan="first" role="tab">First Floor</button>
+            <button class="plan-tab" data-plan="second" role="tab">Second Floor</button>
+          </div>
+          <label class="switch switch-blueprint" title="Blueprint mode">
+            <input type="checkbox" id="blueprintToggle" aria-label="Toggle blueprint view" />
+            <span class="switch-track">
+              <span class="switch-thumb"></span>
+              <span class="switch-text on">Blueprint</span>
+              <span class="switch-text off">Standard</span>
+            </span>
+          </label>
+        </div>
+        <div class="plan-viewer">
+          <img src="school of restoration master plan.png" alt="Master plan" id="planImage" />
+        </div>
+      </div>
+
+      <div class="feature-grid reveal">
+        <div class="feature-card">
+          <div class="feature-icon">△</div>
+          <h4>Pyramid Geometry</h4>
+          <p>Triangular forms reinterpret ancient Egyptian monumental architecture for a contemporary campus.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">☥</div>
+          <h4>Ankh Symbolism</h4>
+          <p>The Key of Life woven into spatial organization — preservation as rebirth.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h4>Lattice Screens</h4>
+          <p>Dark wood geometric screens filter light and create layered depth across facades.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">◎</div>
+          <h4>Courtyard Life</h4>
+          <p>Open-air plazas with shade sails connect wings and foster community gathering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aetheria -->
+  <section class="section project-section alt" id="aetheria">
+    <div class="container">
+      <div class="project-header reveal">
+        <span class="section-num">04</span>
+        <div class="project-titles">
+          <span class="project-type">Hospitality · Alexandria, Egypt</span>
+          <h2>Aetheria Hotel</h2>
+        </div>
+      </div>
+      <div class="project-intro reveal">
+        <p>"Aetheria" is a three-star hotel located along the Sidi Gaber Corniche in Alexandria, designed as a destination that combines hospitality, culture, and community.</p>
+        <p>Inspired by the movement of sea waves and the elegance of Ionic Greek columns, the project reflects Alexandria's Mediterranean identity while creating a modern and welcoming atmosphere.</p>
+      </div>
+
+      <div class="aetheria-gallery reveal">
+        <div class="aetheria-main">
+          <img src="assets/aetheria-1.jpg" alt="Aetheria Hotel exterior render" id="aetheriaMain" />
+          <div class="gallery-caption" id="aetheriaCaption">Aetheria — Mediterranean Facade</div>
+        </div>
+        <div class="aetheria-thumbs">
+          <button class="thumb active" data-src="assets/aetheria-1.jpg" data-caption="Aetheria — Mediterranean Facade">
+            <img src="assets/aetheria-1.jpg" alt="Aetheria facade" loading="lazy" />
+          </button>
+          <button class="thumb" data-src="assets/aetheria-2.jpg" data-caption="Aetheria — Sea View Perspective">
+            <img src="assets/aetheria-2.jpg" alt="Aetheria sea view" loading="lazy" />
+          </button>
+          <button class="thumb" data-src="assets/aetheria-3.png" data-caption="Aetheria — Design Concept">
+            <img src="assets/aetheria-3.png" alt="Aetheria concept" loading="lazy" />
+          </button>
+        </div>
+      </div>
+
+      <div class="aetheria-card reveal">
+        <h3>Design Concept</h3>
+        <p>Inspired by the rhythm of sea waves and the timeless elegance of Alexandria's Greek heritage, Aetheria creates a balance between movement, light, and hospitality — connecting people, culture, and the Mediterranean atmosphere.</p>
+        <div class="aetheria-tags">
+          <span>Mediterranean</span>
+          <span>Ionic Columns</span>
+          <span>Sea Views</span>
+          <span>Revit + Manual Render</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid reveal">
+        <div class="contact-text">
+          <span class="section-num">05</span>
+          <h2>Let's Connect</h2>
+          <p>Interested in collaboration or learning more about my work? I'd love to hear from you.</p>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:yostina.sherif@email.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span>yostina.sherif@email.com</span>
+          </a>
+          <a href="#" class="contact-link">
+            <span class="contact-icon">◎</span>
+            <span>Capital University, Cairo</span>
+          </a>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>© 2026 Yostina Sherif · Architectural Portfolio</p>
+        <p class="footer-ar" dir="rtl">إحياء الماضي… من أجل المستقبل</p>
+      </footer>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
