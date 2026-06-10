@@ -48,6 +48,7 @@
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-arabic: 'Aref Ruqaa Ink', 'Lateef', 'Scheherazade New', serif;
 }
 
 [data-theme="night"] {
@@ -157,6 +158,136 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background-size: 40px 40px;
   opacity: 0.03;
   mask-image: linear-gradient(to left, black, transparent);
+}
+
+/* Arabic calligraphy background */
+.calligraphy-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.calligraphy-word {
+  position: absolute;
+  font-family: var(--font-arabic);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--brown-mid);
+  opacity: 0.055;
+  user-select: none;
+  transition: opacity 0.6s var(--ease-out), color 0.6s var(--ease-out);
+}
+
+[data-theme="night"] .calligraphy-word {
+  color: var(--gold);
+  opacity: 0.07;
+}
+
+.cw-architecture {
+  top: 8%;
+  right: -2%;
+  font-size: clamp(5rem, 14vw, 11rem);
+  transform: rotate(-8deg);
+  opacity: 0.045;
+}
+
+.cw-heritage {
+  top: 38%;
+  left: -3%;
+  font-size: clamp(4rem, 10vw, 8rem);
+  transform: rotate(6deg);
+}
+
+.cw-art {
+  top: 22%;
+  left: 18%;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  transform: rotate(-4deg);
+  opacity: 0.04;
+}
+
+.cw-ankh {
+  top: 55%;
+  right: 12%;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  color: var(--gold);
+  opacity: 0.06;
+  transform: rotate(-3deg);
+}
+
+[data-theme="night"] .cw-ankh { opacity: 0.09; }
+
+.cw-revival {
+  bottom: 28%;
+  left: 5%;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  transform: rotate(3deg);
+  opacity: 0.04;
+}
+
+.cw-future {
+  bottom: 12%;
+  right: 0;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  transform: rotate(-5deg);
+  opacity: 0.035;
+}
+
+.cw-beauty {
+  top: 68%;
+  left: 42%;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  transform: rotate(8deg);
+  opacity: 0.035;
+}
+
+.cw-space {
+  top: 12%;
+  left: 8%;
+  font-size: clamp(3rem, 7vw, 6rem);
+  transform: rotate(5deg);
+  opacity: 0.04;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cw-architecture { animation: calligraphyDrift 28s ease-in-out infinite alternate; }
+  .cw-heritage { animation: calligraphyDrift 32s ease-in-out infinite alternate-reverse; }
+  .cw-ankh { animation: calligraphyDrift 24s ease-in-out infinite alternate; }
+  .cw-revival { animation: calligraphyDrift 30s ease-in-out infinite alternate-reverse; }
+}
+
+@keyframes calligraphyDrift {
+  from { transform: translateY(0) rotate(var(--cw-rotate, 0deg)); }
+  to { transform: translateY(-12px) rotate(calc(var(--cw-rotate, 0deg) + 2deg)); }
+}
+
+.cw-architecture { --cw-rotate: -8deg; }
+.cw-heritage { --cw-rotate: 6deg; }
+.cw-ankh { --cw-rotate: -3deg; }
+.cw-revival { --cw-rotate: 3deg; }
+
+@media (max-width: 768px) {
+  .cw-art,
+  .cw-beauty,
+  .cw-space,
+  .cw-future { display: none; }
+
+  .calligraphy-word {
+    opacity: 0.04;
+  }
+
+  .cw-architecture {
+    font-size: 4.5rem;
+    right: -8%;
+  }
+
+  .cw-heritage {
+    font-size: 3.5rem;
+    left: -10%;
+  }
 }
 
 /* ========== SWITCHES ========== */
@@ -1140,9 +1271,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 [data-theme="night"] .project-titles h2 span { color: var(--gold); }
 
 .arabic-tagline {
-  font-size: var(--text-md);
+  font-family: var(--font-arabic);
+  font-size: var(--text-lg);
   color: var(--text-muted);
   margin-top: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .project-intro {
@@ -1590,7 +1723,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .footer-ar {
-  font-size: var(--text-sm);
+  font-family: var(--font-arabic);
+  font-size: var(--text-md);
   opacity: 0.6;
 }
 
@@ -1659,6 +1793,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .scroll-line { animation: none; }
   .wave-deco { animation: none; }
   .hero-deco { animation: none; }
+  .calligraphy-word { animation: none !important; }
 }
 
 @media (max-width: 768px) {
