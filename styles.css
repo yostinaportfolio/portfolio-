@@ -1458,10 +1458,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: scale(1.02);
 }
 
-.aetheria-thumbs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
+.gallery-thumbs--aetheria {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .gallery-thumbs--aetheria { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .gallery-thumbs--aetheria { grid-template-columns: repeat(2, 1fr); }
 }
 
 .aetheria-card {

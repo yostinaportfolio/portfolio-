@@ -72,8 +72,14 @@ function smoothScrollTo(targetY, duration = 900) {
   requestAnimationFrame(step);
 }
 
+function revealInSection(section) {
+  if (!section) return;
+  section.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+}
+
 function scrollToSection(el) {
   const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
+  revealInSection(el);
   smoothScrollTo(el.getBoundingClientRect().top + window.scrollY - navHeight + 1);
 }
 
@@ -198,9 +204,13 @@ function buildThumbs(container, items, onSelect) {
 
 // ========== Aetheria Gallery ==========
 const aetheriaGalleryData = [
-  { src: `${AETHERIA}/facade.jpg`, caption: 'Aetheria — Mediterranean Facade' },
-  { src: `${AETHERIA}/sea-view.jpg`, caption: 'Aetheria — Sea View Perspective' },
-  { src: `${AETHERIA}/concept.png`, caption: 'Aetheria — Design Concept' },
+  { src: `${AETHERIA}/picture-1.png`, caption: 'Aetheria — Facade Sketch' },
+  { src: `${AETHERIA}/picture-2.png`, caption: 'Aetheria — Curved Facade & Pool' },
+  { src: `${AETHERIA}/picture-3.png`, caption: 'Aetheria — Building Section' },
+  { src: `${AETHERIA}/picture-4.png`, caption: 'Aetheria — Front Elevation' },
+  { src: `${AETHERIA}/picture-5.png`, caption: 'Aetheria — Waterfront Perspective' },
+  { src: `${AETHERIA}/picture-6.png`, caption: 'Aetheria — Master Plan' },
+  { src: `${AETHERIA}/picture-7.png`, caption: 'Aetheria — Pool Terrace View' },
 ];
 
 const aetheriaMain = document.getElementById('aetheriaMain');
@@ -210,10 +220,20 @@ const aetheriaThumbs = document.getElementById('aetheriaThumbs');
 function initAetheriaGallery() {
   if (!aetheriaThumbs || aetheriaThumbs.dataset.ready) return;
   aetheriaThumbs.dataset.ready = 'true';
-  buildThumbs(aetheriaThumbs, aetheriaGalleryData, (index, items) => {
+
+  const selectAetheria = (index, items) => {
     aetheriaThumbs.querySelectorAll('.thumb').forEach((t, i) => t.classList.toggle('active', i === index));
     swapImage(aetheriaMain, aetheriaCaption, items[index]);
-  });
+  };
+
+  if (aetheriaThumbs.querySelector('.thumb')) {
+    aetheriaThumbs.querySelectorAll('.thumb').forEach((thumb, i) => {
+      thumb.addEventListener('click', () => selectAetheria(i, aetheriaGalleryData));
+    });
+    return;
+  }
+
+  buildThumbs(aetheriaThumbs, aetheriaGalleryData, selectAetheria);
 }
 
 // ========== Panel crossfade ==========
@@ -332,17 +352,22 @@ function initAnkhGallery() {
 const ankhSection = document.getElementById('ankh');
 const aetheriaSection = document.getElementById('aetheria');
 
+initAetheriaGallery();
+
 const galleryLazyObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     if (entry.target === ankhSection) initAnkhGallery();
-    if (entry.target === aetheriaSection) initAetheriaGallery();
     galleryLazyObserver.unobserve(entry.target);
   });
 }, { rootMargin: '300px 0px' });
 
 if (ankhSection) galleryLazyObserver.observe(ankhSection);
-if (aetheriaSection) galleryLazyObserver.observe(aetheriaSection);
+
+if (window.location.hash) {
+  const hashTarget = document.querySelector(window.location.hash);
+  if (hashTarget) revealInSection(hashTarget);
+}
 
 // ========== Nav active links ==========
 const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
