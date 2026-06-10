@@ -204,13 +204,13 @@ function buildThumbs(container, items, onSelect) {
 
 // ========== Aetheria Gallery ==========
 const aetheriaGalleryData = [
-  { src: `${AETHERIA}/picture-1.png`, caption: 'Aetheria — Facade Sketch' },
-  { src: `${AETHERIA}/picture-2.png`, caption: 'Aetheria — Curved Facade & Pool' },
-  { src: `${AETHERIA}/picture-3.png`, caption: 'Aetheria — Building Section' },
-  { src: `${AETHERIA}/picture-4.png`, caption: 'Aetheria — Front Elevation' },
-  { src: `${AETHERIA}/picture-5.png`, caption: 'Aetheria — Waterfront Perspective' },
-  { src: `${AETHERIA}/picture-6.png`, caption: 'Aetheria — Master Plan' },
-  { src: `${AETHERIA}/picture-7.png`, caption: 'Aetheria — Pool Terrace View' },
+  { src: `${AETHERIA}/waterfront-perspective.png`, caption: 'Aetheria — Waterfront Perspective' },
+  { src: `${AETHERIA}/facade-signage.jpg`, caption: 'Aetheria — Facade Signage' },
+  { src: `${AETHERIA}/curved-facade-pool.jpg`, caption: 'Aetheria — Curved Facade & Pool' },
+  { src: `${AETHERIA}/front-elevation.jpg`, caption: 'Aetheria — Front Elevation' },
+  { src: `${AETHERIA}/building-section.png`, caption: 'Aetheria — Building Section' },
+  { src: `${AETHERIA}/master-plan.png`, caption: 'Aetheria — Master Plan' },
+  { src: `${AETHERIA}/pool-terrace.jpg`, caption: 'Aetheria — Pool Terrace View' },
 ];
 
 const aetheriaMain = document.getElementById('aetheriaMain');

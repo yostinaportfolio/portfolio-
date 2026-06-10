@@ -1708,6 +1708,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--gold);
 }
 
+.contact-icon--linkedin {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  width: 1.5rem;
+  text-align: center;
+}
+
 .footer {
   border-top: 1px solid rgba(246, 242, 229, 0.15);
   padding-top: 2rem;
